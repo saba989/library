@@ -7,7 +7,7 @@ jdk 'Jdk-8'
 stages{
 stage('git' ){
 steps{
-git credentialsId:'gitnagarro',url:'https://github.com/saba989/library/new/main/libraryclient'
+git credentialsId:'github',url:'https://github.com/saba989/library/new/main/libraryclient'
 }
 }
 stage('build'){
