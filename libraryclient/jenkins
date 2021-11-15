@@ -1,0 +1,19 @@
+pipeline{
+agent any
+tools{
+maven 'maven'
+jdk 'Jdk-8'
+}
+stages{
+stage('git' ){
+steps{
+git credentialsId:'gitnagarro',url:'https://github.com/saba989/library/new/main/libraryclient'
+}
+}
+stage('build'){
+steps{
+bat 'mvn -f  libraryclient/pom.xml clean install'
+}
+}
+}
+}
